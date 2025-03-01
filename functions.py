@@ -167,7 +167,7 @@ def visualize_pca_interactive_master(ident_cat, base_ident, topic, model, mode):
             xanchor="center"
         ),
         font=dict(size=12, family="Arial", color="darkgray"),
-        margin=dict(l=25, r=25, t=100, b=50),
+        margin=dict(l=10, r=10, t=100, b=50),
         plot_bgcolor="white",
         paper_bgcolor="white",
         showlegend=False
