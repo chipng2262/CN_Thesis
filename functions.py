@@ -138,7 +138,7 @@ def visualize_pca_interactive_master(ident_cat, base_ident, topic, model, mode):
                         y=sub_data["PC2"],
                         mode="markers",
                         marker=dict(
-                            size=6,
+                            size=3,
                             opacity=1,
                             color=color_map[ident_current]
                         ),
