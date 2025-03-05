@@ -29,29 +29,6 @@ from plotly.subplots import make_subplots
 from functions import visualize_pca_interactive_master, model_dict
 
 st.set_page_config(layout="wide")
-st.markdown(
-    """
-    <style>
-    .main .block-container {
-        padding-left: 0rem;
-        padding-right: 0rem;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    """
-    <style>
-    .main, .css-18e3th9, .css-1d391kg {
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 st.title("PCA Visualization of Model Responses")
 st.markdown("This app visualizes PCA results for model responses using various parameters.")
