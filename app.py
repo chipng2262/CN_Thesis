@@ -41,6 +41,8 @@ st.markdown(
     Configured as **pairwise comparisons**, these customized visualizations allow you to:
     - **Visually identify** differences between embeddings for different identity groups (where biases might exist).
     - **Perform qualitative analysis** of biases by reading and comparing the stories associated with each data point (what specific biases exist).
+
+    For the best view, use this webpage in full-screen mode.
     """,
     unsafe_allow_html=True
 )
