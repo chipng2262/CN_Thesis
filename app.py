@@ -30,9 +30,20 @@ from functions import visualize_pca_interactive_master, model_dict
 
 st.set_page_config(layout="wide")
 
-st.title("PCA Visualization of Model Responses")
-st.markdown("This app visualizes PCA results for model responses using various parameters.")
+st.title("Interactive PCA Visualization Viewer")
+st.subheader("Nguyen, Chip (2025): Examining Intersectional Queer Biases in Pre-trained Large Language Models: A Combined Statistical and Visual-Qualitative Approach")
+st.markdown(
+    """
+    **For background information, please refer to the paper attached above.**  
 
+    Using this app, you can interactively view **2D PCA projections** of story embeddings for any **focus group** (configured with any of the 5 parameters below).  
+
+    Configured as **pairwise comparisons**, these customized visualizations allow you to:
+    - **Visually identify** differences between embeddings for different identity groups (where biases might exist).
+    - **Perform qualitative analysis** of biases by reading and comparing the stories associated with each data point (what specific biases exist).
+    """,
+    unsafe_allow_html=True
+)
 # Create columns for parameter selection
 col1, col2, col3, col4, col5 = st.columns(5)
 
