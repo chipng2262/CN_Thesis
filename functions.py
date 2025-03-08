@@ -71,7 +71,10 @@ def make_ident_list(ident_category, base_ident):
 
 
 def visualize_pca_interactive_master(ident_cat, base_ident, topic, model, mode):
-    print(model)
+    if ident_cat == "race & ethnicity":
+        ident_cat = "race"
+
+   #print(model)
     model_name = model_dict[model]
     df_og = pd.read_excel(f"data/{model_name}/{model_name}_PROCESSED_responses.xlsx", index_col=0)
     
@@ -121,7 +124,8 @@ def visualize_pca_interactive_master(ident_cat, base_ident, topic, model, mode):
     # Raise subplot titles slightly
     for annotation in fig["layout"]["annotations"]:
         annotation["y"] += 0.01
-    
+
+    legend_identities = set()
     # Create separate traces for each identity in the pair
     for i, iden_1 in enumerate(ident_list):
         for j, iden_2 in enumerate(ident_list):
@@ -131,7 +135,7 @@ def visualize_pca_interactive_master(ident_cat, base_ident, topic, model, mode):
             # Plot each identity in its own trace so hover label can match marker color
             for ident_current in [iden_1, iden_2]:
                 sub_data = pair_data[pair_data["ident"] == ident_current]
-                
+
                 fig.add_trace(
                     go.Scatter(
                         x=sub_data["PC1"],
@@ -170,8 +174,8 @@ def visualize_pca_interactive_master(ident_cat, base_ident, topic, model, mode):
         margin=dict(l=20, r=20, t=100, b=50),
         plot_bgcolor="white",
         paper_bgcolor="white",
-        showlegend=False
-    )
+        showlegend=False,
+        )
     
     # Subplot titles font
     for annotation in fig["layout"]["annotations"]:

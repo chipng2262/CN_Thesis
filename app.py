@@ -70,7 +70,7 @@ with col3:
 with col4:
     ident_cat = st.selectbox(
         "Intersectional Category",
-        ["race", "income", "disability", "geography", "age", "religion"]
+        ["race & ethnicity", "income", "disability", "geography", "age", "religion"]
     )
 
 
