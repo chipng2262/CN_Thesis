@@ -31,7 +31,7 @@ from functions import visualize_pca_interactive_master, model_dict
 st.set_page_config(layout="wide")
 
 st.title("Interactive PCA Visualization Viewer")
-st.markdown("### [Nguyen, Chip (2025): Examining Intersectional Queer Biases in Pre-trained Large Language Models: A Combined Statistical and Visual-Qualitative Approach](https://drive.google.com/file/d/18BQQJMj32LdCqtqLCNuOb5gn2T_kChtp/view?usp=sharing)")
+st.markdown("### [Nguyen, Chip (2025): Examining Intersectional Queer Biases in Pre-trained Large Language Models: A Combined Statistical and Visual-Qualitative Approach for Quantification and Identification](https://drive.google.com/file/d/18BQQJMj32LdCqtqLCNuOb5gn2T_kChtp/view?usp=sharing)")
 st.markdown(
     """
     **For background information, please refer to the paper attached above.**  
@@ -69,7 +69,7 @@ with col3:
 
 with col4:
     ident_cat = st.selectbox(
-        "Identity Category",
+        "Intersectional Category",
         ["race", "income", "disability", "geography", "age", "religion"]
     )
 
